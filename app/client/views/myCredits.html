@@ -1,9 +1,11 @@
 <template name="myCredits">
+    {{log 'test'}}
     <ul>
     {{#each credits}}
         <li>amount: {{amount}}</li>
         <li>from: {{debtor}} </li>
-        <li>date: {{date}} </li>
+        {{log date}}
+        <li>date: {{momentDate date}} </li>
     {{/each}}
     </ul>
 </template>
