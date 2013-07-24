@@ -1,5 +1,6 @@
 {
   "packages": {
+    "momentjs": {},
     "accounts-ui-bootstrap-dropdown": {}
   }
 }
