@@ -1,0 +1,82 @@
+<template name="mainDebts">
+  <section id="people" data-transition="slide" data-aside="features" class="drag">
+    {{> header}}
+    <nav data-control="groupbar">
+        <a data-view-article="medebe" data-label="me debe" class="active"></a>
+        <a data-view-article="ledebo" data-label="le debo " data-count="19"></a>
+        <a data-label="todo junto"></a>
+    </nav>
+
+    {{> myCredits}}
+    {{> myDebts}}
+    {{> footerDebts}}
+
+  </section>
+</template>
+
+
+<template name="header">
+  <header data-title="Arnaldo" data-back="chevron-left">
+    <nav class="on-right">
+        <a data-icon="plus"></a>
+    </nav>
+  </header>
+</template>
+
+
+<template name="myCredits">
+    <article id="medebe" class="active list">
+        <ul>
+          {{> profile}}
+        </ul>
+        <ul class="indented people-items">
+        {{#each credits}}
+          {{> detailDebt}}
+        {{/each}}
+        </ul>
+    </article>
+</template>
+
+<template name="myDebts">
+    <article id="ledebo" class="list">
+        {{> profile}}
+        <ul class="indented people-items">
+            {{#each debts}}
+             {{> detailDebt}}
+            {{/each}}
+        </ul>
+    </article>
+</template>
+
+<template name="detailDebt">
+    <li class="accept">
+        <div class="on-right text tiny">{{date}}</div>
+        <strong>${{amount}}</strong>
+        <span class='text tiny opacity'>{{description}}</span>
+        {{#each tags}}
+            <span class="label">{{this}}</span>
+        {{/each}}
+    </li>
+</template>
+
+<template name="profile">
+  <li class="thumb big bigger">
+              <img src="http://placekitten.com/160/160">
+              <div>
+                  <div class="on-right text tiny">lorem ipsum</div>
+                  <strong>Arnaldo</strong>
+                  <span class="text tiny opacity">lorem ipsum</span>
+                  <small>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aliquam, nisi commodi blanditiis.
+                  </small>
+              </div>
+          </li>
+</template>
+
+<template name="footerDebts">
+    <footer>
+        <nav>
+            <a href="#" class="active">Total Deuda Persona</a>
+        </nav>
+    </footer>
+</template>
