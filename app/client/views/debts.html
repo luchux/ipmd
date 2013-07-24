@@ -2,8 +2,9 @@
   <section id="people" data-transition="slide" data-aside="features" class="drag">
     {{> header}}
     <nav data-control="groupbar">
-        <a data-view-article="medebe" data-label="me debe" class="active"></a>
-        <a data-view-article="ledebo" data-label="le debo " data-count="19"></a>
+       {{loginButtons align="right"}}
+        <a data-view-article="medebe" data-label="me debe" class="active" data-count="{{totalCredits}}"></a>
+        <a data-view-article="ledebo" data-label="le debo " data-count="{{totalDebts}}"></a>
         <a data-label="todo junto"></a>
     </nav>
 
