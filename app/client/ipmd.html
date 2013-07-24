@@ -1,0 +1,74 @@
+<head>
+  <title>ipmd</title>
+</head>
+
+<body>
+<!--  {{> login}}-->
+  {{> features}}
+  {{> groups}}
+</body>
+
+<template name="login">
+  <section id="login" data-transition="slide" data-aside="features" class="drag">
+		<article class="active splash">
+			{{loginButtons align="left"}}
+			<div class="logo">iPayMyDebts</div>
+			<div class="form">
+				<!--
+				<fieldset class="radius-top" data-icon="user">
+					<input type="text" placeholder="Your username" id="txt-signup-name" value="">
+				</fieldset>
+				<fieldset class="radius-bottom shadow" data-icon="lock">
+					<input type="text" placeholder="Your password" id="txt-signup-password" value="">
+				</fieldset>
+				<br>
+				<button class="anchor" data-icon="lock" data-view-section="groups" data-label="Login"></button>
+				<!-- <button data-view-section="back" class="secondary anchor" data-icon="home" data-label="Return to kitchensink"></button> -->
+
+
+			</div>
+			<span class="copyright text thin">Copyright (C) 2013 - <span class="text bold">iPayMyDebts</span></span>
+		</article>
+	</section>
+</template>
+
+<template name="features">
+	<aside id="features" data-transition="left">
+		<header data-title="Features">
+			<nav class="on-right">
+				<a href="#" class="buttons" data-icon="cog"></a>
+			</nav>
+		</header>
+
+		<article class="list active">
+			<ul>
+				<li data-icon="user">
+					<strong>My profile</strong>
+				</li>
+
+				<li data-icon="info-sign">
+					<div class="tag on-right">8</div>
+					<strong>Notifications</strong>
+				</li>
+
+				<li data-icon="tag">
+					<div class="tag on-right">9</div>
+					<strong>Tags</strong>
+				</li>
+
+				<li data-icon="dashboard">
+					<div class="tag on-right">9</div>
+					<strong>Stats</strong>
+				</li>
+
+				<li data-icon="question-sign">
+					<strong>About</strong>
+				</li>
+
+				<li data-icon="off" class="red" data-view-section="login">
+					<strong>Log out</strong>
+				</li>
+			</ul>
+		</article>
+	</aside>
+</template>
