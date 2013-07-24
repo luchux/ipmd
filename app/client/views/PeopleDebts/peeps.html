@@ -1,0 +1,47 @@
+<template name="debtor-creditor">
+    <li class="thumb big accept debtor-creditor">
+        {{> profile}}
+    </li>
+</template>
+
+<template name="mainPeeps">
+  <div>
+  <!--
+  <section id="group" data-transition="slide" data-aside="features" class="drag">
+  -->
+    <header data-title="Group" data-back="chevron-left">
+      <nav class="on-right">
+        <a data-icon="plus"></a>
+      </nav>
+    </header>
+
+    <article id="list" class="active list indented scroll">
+      <ul>
+        <!-- Deudores! -->
+        <li class="anchor contrast">Debtors</li>
+
+          {{#each debtors}}
+          {{> debtor-creditor}}
+          {{/each}}
+
+        </li>
+
+        <!-- Acreedores -->
+        <li class="anchor contrast">Acreedores</li>
+
+          {{#each creditors}}
+          {{> debtor-creditor}}
+          {{/each}}
+
+        </li>
+      </ul>
+    </article>
+
+    <footer>
+      <nav>
+        <a href="#" class="active red">Total Deuda Grupo</a>
+      </nav>
+    </footer>
+  <!--</section>-->
+</div>
+</template>
