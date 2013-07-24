@@ -1,0 +1,10 @@
+<template name="myDebts">
+    <ul>
+    {{#each debts}}
+        <li>amount: {{amount}}</li>
+        <li>to: {{creditor}} </li>
+        <li>debtor: {{debtor}} </li>
+        <li>date: {{date}} </li>
+    {{/each}}
+    </ul>
+</template>
