@@ -12,7 +12,7 @@ if (Groups.find({}).count() === 0 && Meteor.users.find({}).count() > 2){
     user2 = Meteor.users.find({}).fetch()[1];
     myself = Meteor.users.find({}).fetch()[2];
 
-    Groups.insert({name: 'lopibe', user: myself, listUsers:[user1, user2] });
+    Groups.insert({name: 'lopibe', userId: myself._id, listUsers:[user1, user2] });
 
-    Groups.insert({ name: 'family', user: user1, listUsers: [myself] });
+    Groups.insert({ name: 'family', userId: user1._id, listUsers: [myself] });
 }
