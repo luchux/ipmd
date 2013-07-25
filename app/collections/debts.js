@@ -1,1 +1,0 @@
-Debts = new Meteor.Collection("Debts")
